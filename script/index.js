@@ -4,14 +4,14 @@ import createAnimationManager from "./clockAnimation.js";
 
 const timeManager = createTimeManager();
 const DateManager = createDateManager();
-const AnimationManager = createAnimationManager()
+const AnimationManager = createAnimationManager();
 
 window.updateTime = timeManager.updateTime;
 window.setDate = DateManager.setDate;
-window.animateHourArrow = AnimationManager.animateHourArrow
-window.animateMinArrow = AnimationManager.animateMinArrow
+window.animateHourArrow = AnimationManager.animateHourArrow;
+window.animateMinArrow = AnimationManager.animateMinArrow;
 
-updateTime()
+updateTime();
 setDate();
 
 const interval = setInterval(() => {
@@ -19,9 +19,9 @@ const interval = setInterval(() => {
   let cutString = zeroString.split(":");
   const min = cutString[1];
   const hour = cutString[0];
-  animateHourArrow(hour)
-  animateMinArrow(min)
- 
+  animateHourArrow(hour);
+  animateMinArrow(min);
+
   if (zeroString === "0:0:0") {
     setDate();
   }
