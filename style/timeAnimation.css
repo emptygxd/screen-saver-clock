@@ -1,0 +1,67 @@
+#minutes::before,
+#seconds::before {
+  content: ":";
+  position: absolute;
+  top: -5%;
+  left: -21%;
+}
+
+.firstS,
+.firstM,
+.firstH {
+  position: absolute;
+  left: 0;
+  width: 25px;
+}
+.secondS,
+.secondM,
+.secondH {
+  position: absolute;
+  right: 0;
+  width: 25px;
+}
+
+#hours,
+#minutes,
+#seconds {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+#seconds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moveTop {
+  animation: moveTop ease-out 0.7s infinite;
+}
+
+.moveBot {
+  animation: moveBot ease-out 0.7s 1 forwards;
+}
+
+.hide {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+@keyframes moveTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveBot {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
