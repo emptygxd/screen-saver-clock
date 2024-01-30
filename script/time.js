@@ -46,7 +46,7 @@ export default function createTimeManager() {
     newH1.classList.add("hide");
     setTimeout(() => {
       parent.removeChild(newH1);
-    }, 900);
+    }, 500);
   }
 
   function removeOld(parent, h1Class) {
@@ -111,7 +111,6 @@ export default function createTimeManager() {
       parseInt(sec / 10) === 0 &&
       sec % 10 === 0
     ) {
-      console.log(parseInt(min / 10));
       removeOld(hours, "secondH");
       createNext(hours, "secondH", hour % 10);
     }
